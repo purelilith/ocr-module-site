@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Распознавание текста</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="card">
+    <h1>Текст с фотографии</h1>
+    <p class="subtitle">Загрузите фото с русским текстом, и мы его распознаем</p>
+
+    <input type="file" id="fileInput" accept="image/*" hidden>
+    <label for="fileInput" class="btn">📷 Выбрать фото</label>
+    <p id="fileName" class="file-name"></p>
+
+    <img id="preview" class="preview" alt="" hidden>
+
+    <button id="recognizeBtn" class="btn btn-main" disabled>Распознать текст</button>
+
+    <h2>Результат</h2>
+    <textarea id="result" readonly
+      placeholder="Здесь появится распознанный текст..."></textarea>
+  </main>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
