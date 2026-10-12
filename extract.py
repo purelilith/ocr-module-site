@@ -38,6 +38,10 @@ def find_after_label(text, labels):
             return match.group(1).strip()
     return None
 
+def fix_quotes(value):
+    value = re.sub(r"(?<![А-Яа-яЁё])к(?=[А-ЯЁ])", "«", value)
+    value = re.sub(r"(?<=[А-Яа-яЁё])>", "»", value)
+    return value.replace("<", "«")
 
 def read_date(text, value, cfg):
     if value is None and "period_labels" in cfg:
@@ -66,7 +70,7 @@ def parse_fields(text, doc_type):
             digits = re.search(r"\d+", value)
             fields[key] = digits.group(0) if digits else NOT_FOUND
         else:
-            fields[key] = value
+            fields[key] = fix_quotes(value)
     return fields
 
 

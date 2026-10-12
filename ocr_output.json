@@ -1,0 +1,462 @@
+[
+  {
+    "document_id": "open-001",
+    "document_type": "study_certificate",
+    "fields": {
+      "student_name": "Александров Артём Игоревич",
+      "university": "Учебный университет «Меридианх",
+      "program": "38.03.01 Экономика",
+      "study_form": "очная",
+      "study_start": "2023-09-01",
+      "study_end": "2026-08-31",
+      "document_number": "ОБ-1001",
+      "issue_date": "2026-09-01",
+      "signature_present": true,
+      "seal_present": true
+    }
+  },
+  {
+    "document_id": "open-002",
+    "document_type": "study_certificate",
+    "fields": {
+      "student_name": "Мельников Денис Игоревич",
+      "university": "Учебная академия «Горизонт%",
+      "program": "09.03.01 Информатика и вычислительная техника",
+      "study_form": "очно-заочная",
+      "study_start": "не найдено",
+      "study_end": "2026-08-31",
+      "document_number": "ОБ-1002",
+      "issue_date": "не найдено",
+      "signature_present": true,
+      "seal_present": true
+    }
+  },
+  {
+    "document_id": "open-003",
+    "document_type": "study_certificate",
+    "fields": {
+      "student_name": "Жуков Андрей Дмитриевич",
+      "university": "Учебная академия «Горизонт%",
+      "program": "38.03.01 Экономика",
+      "study_form": "очно-заочная",
+      "study_start": "2022-09-01",
+      "study_end": "2026-08-31",
+      "document_number": "ОБ-1003",
+      "issue_date": "2026-09-21",
+      "signature_present": true,
+      "seal_present": true
+    }
+  },
+  {
+    "document_id": "open-004",
+    "document_type": "study_certificate",
+    "fields": {
+      "student_name": "Климов Борис Дмитриевич",
+      "university": "Учебный университет «Меридианх",
+      "program": "09.03.01 Информатика и вычислительная техника",
+      "study_form": "очно-заочная",
+      "study_start": "2023-09-01",
+      "study_end": "2026-08-31",
+      "document_number": "ОБ-1004",
+      "issue_date": "2026-09-20",
+      "signature_present": true,
+      "seal_present": true
+    }
+  },
+  {
+    "document_id": "open-005",
+    "document_type": "study_certificate",
+    "fields": {
+      "student_name": "не найдено",
+      "university": "Учебная академия «Горизонт%",
+      "program": "09.03.01 Информатика и вычислительная техника",
+      "study_form": "очная",
+      "study_start": "2022-09-01",
+      "study_end": "2026-08-31",
+      "document_number": "не найдено",
+      "issue_date": "2026-09-12",
+      "signature_present": true,
+      "seal_present": true
+    }
+  },
+  {
+    "document_id": "open-006",
+    "document_type": "study_certificate",
+    "fields": {
+      "student_name": "Соколов Олег Игоревич",
+      "university": "не найдено",
+      "program": "38.03.01 Экономика",
+      "study_form": "заочная",
+      "study_start": "не найдено",
+      "study_end": "2026-08-31",
+      "document_number": "ОБ-1006",
+      "issue_date": "2026-09-20",
+      "signature_present": true,
+      "seal_present": true
+    }
+  },
+  {
+    "document_id": "open-007",
+    "document_type": "study_certificate",
+    "fields": {
+      "student_name": "Орлов Максим Сергеевич",
+      "university": "Учебный университет «Меридианх",
+      "program": "не найдено",
+      "study_form": "не найдено",
+      "study_start": "2024-09-01",
+      "study_end": "2026-08-31",
+      "document_number": "ОБ-1007",
+      "issue_date": "2026-09-20",
+      "signature_present": true,
+      "seal_present": true
+    }
+  },
+  {
+    "document_id": "open-008",
+    "document_type": "study_certificate",
+    "fields": {
+      "student_name": "Крылов Артём Викторович",
+      "university": "Учебный университет «Меридианх",
+      "program": "42.03.02 Журналистика",
+      "study_form": "очная",
+      "study_start": "не найдено",
+      "study_end": "2026-08-31",
+      "document_number": "ОБ-1008",
+      "issue_date": "2026-09-14",
+      "signature_present": true,
+      "seal_present": true
+    }
+  },
+  {
+    "document_id": "open-009",
+    "document_type": "study_certificate",
+    "fields": {
+      "student_name": "Морозов Артём Дмитриевич",
+      "university": "Учебная академия «Горизонт%",
+      "program": "38.03.01 Экономика",
+      "study_form": "очно-заочная",
+      "study_start": "2022-09-01",
+      "study_end": "не найдено",
+      "document_number": "ОБ-1009",
+      "issue_date": "2026-09-21",
+      "signature_present": true,
+      "seal_present": true
+    }
+  },
+  {
+    "document_id": "open-010",
+    "document_type": "study_certificate",
+    "fields": {
+      "student_name": "Петров Андрей Николаевич",
+      "university": "Учебный институт «Вектор»",
+      "program": "42.03.02 Журналистика",
+      "study_form": "очно-заочная",
+      "study_start": "2023-09-01",
+      "study_end": "2026-08-31",
+      "document_number": "ОБ-1010",
+      "issue_date": "2026-09-20",
+      "signature_present": true,
+      "seal_present": true
+    }
+  },
+  {
+    "document_id": "open-011",
+    "document_type": "academic_leave_application",
+    "fields": {
+      "student_name": "Соколов Олег Николаевич",
+      "group": "ЖР-25-1",
+      "course": "3",
+      "leave_reason": "по состоянию здоровья",
+      "leave_start": "не найдено",
+      "leave_end": "2027-08-31",
+      "application_date": "не найдено",
+      "signature_present": true
+    }
+  },
+  {
+    "document_id": "open-012",
+    "document_type": "academic_leave_application",
+    "fields": {
+      "student_name": "Захаров Фёдор Дмитриевич",
+      "group": "ЖР-23-3",
+      "course": "3",
+      "leave_reason": "по состоянию здоровья",
+      "leave_start": "2026-11-01",
+      "leave_end": "2027-08-31",
+      "application_date": "не найдено",
+      "signature_present": true
+    }
+  },
+  {
+    "document_id": "open-013",
+    "document_type": "academic_leave_application",
+    "fields": {
+      "student_name": "Павлов Фёдор Дмитриевич",
+      "group": "ЭК-24-2",
+      "course": "4",
+      "leave_reason": "по семейным обстоятельствам",
+      "leave_start": "не найдено",
+      "leave_end": "2027-08-31",
+      "application_date": "2026-10-04",
+      "signature_present": true
+    }
+  },
+  {
+    "document_id": "open-014",
+    "document_type": "academic_leave_application",
+    "fields": {
+      "student_name": "Орлов Фёдор Викторович",
+      "group": "ЖР-22-3",
+      "course": "2",
+      "leave_reason": "не найдено",
+      "leave_start": "2026-11-01",
+      "leave_end": "2027-08-31",
+      "application_date": "2026-10-09",
+      "signature_present": true
+    }
+  },
+  {
+    "document_id": "open-015",
+    "document_type": "academic_leave_application",
+    "fields": {
+      "student_name": "не найдено",
+      "group": "ИВТ-23-4",
+      "course": "4",
+      "leave_reason": "в связи c уходом за родственником",
+      "leave_start": "не найдено",
+      "leave_end": "2027-08-31",
+      "application_date": "2026-10-06",
+      "signature_present": true
+    }
+  },
+  {
+    "document_id": "open-016",
+    "document_type": "academic_leave_application",
+    "fields": {
+      "student_name": "Иванов Борис Николаевич",
+      "group": "не найдено",
+      "course": "не найдено",
+      "leave_reason": "по семейным обстоятельствам",
+      "leave_start": "2026-11-01",
+      "leave_end": "2027-08-31",
+      "application_date": "2026-10-05",
+      "signature_present": true
+    }
+  },
+  {
+    "document_id": "open-017",
+    "document_type": "academic_leave_application",
+    "fields": {
+      "student_name": "Захаров Юрий Николаевич",
+      "group": "ЖР-21-2",
+      "course": "не найдено",
+      "leave_reason": "по состоянию здоровья",
+      "leave_start": "не найдено",
+      "leave_end": "2027-08-31",
+      "application_date": "2026-10-08",
+      "signature_present": true
+    }
+  },
+  {
+    "document_id": "open-018",
+    "document_type": "academic_leave_application",
+    "fields": {
+      "student_name": "Захаров Роман Дмитриевич",
+      "group": "ИВТ-22-3",
+      "course": "3",
+      "leave_reason": "по семейным обстоятельствам",
+      "leave_start": "2026-11-01",
+      "leave_end": "2027-08-31",
+      "application_date": "2026-10-03",
+      "signature_present": true
+    }
+  },
+  {
+    "document_id": "open-019",
+    "document_type": "academic_leave_application",
+    "fields": {
+      "student_name": "Романов Илья Андреевич",
+      "group": "ЖР-23-4",
+      "course": "2",
+      "leave_reason": "по состоянию здоровья",
+      "leave_start": "не найдено",
+      "leave_end": "не найдено",
+      "application_date": "2026-10-02",
+      "signature_present": true
+    }
+  },
+  {
+    "document_id": "open-020",
+    "document_type": "academic_leave_application",
+    "fields": {
+      "student_name": "Захаров Виктор Михайлович",
+      "group": "не найдено",
+      "course": "2",
+      "leave_reason": "по семейным обстоятельствам",
+      "leave_start": "2026-11-01",
+      "leave_end": "2027-08-31",
+      "application_date": "не найдено",
+      "signature_present": true
+    }
+  },
+  {
+    "document_id": "open-021",
+    "document_type": "internship_certificate",
+    "fields": {
+      "student_name": "Данилов Олег Алексеевич",
+      "organization": "Учебная организация «Спектру",
+      "internship_start": "2026-06-01",
+      "internship_end": "2026-07-15",
+      "supervisor_name": "Ильина Елена Андреевна",
+      "grade": "удовлетворительно",
+      "document_number": "ПР-2021",
+      "issue_date": "2026-07-18",
+      "signature_present": true,
+      "seal_present": true
+    }
+  },
+  {
+    "document_id": "open-022",
+    "document_type": "internship_certificate",
+    "fields": {
+      "student_name": "Мельников Фёдор Михайлович",
+      "organization": "Учебная организация «Спектр»",
+      "internship_start": "не найдено",
+      "internship_end": "2026-07-15",
+      "supervisor_name": "Соколова Анна Викторовна",
+      "grade": "зачтено",
+      "document_number": "ПР-2022",
+      "issue_date": "не найдено",
+      "signature_present": true,
+      "seal_present": true
+    }
+  },
+  {
+    "document_id": "open-023",
+    "document_type": "internship_certificate",
+    "fields": {
+      "student_name": "Шестаков Глеб Дмитриевич",
+      "organization": "Учебная организация «Спектру",
+      "internship_start": "2026-06-01",
+      "internship_end": "2026-07-15",
+      "supervisor_name": "Соколова Анна Викторовна",
+      "grade": "хорошо",
+      "document_number": "ПР-202З",
+      "issue_date": "2026-07-18",
+      "signature_present": true,
+      "seal_present": true
+    }
+  },
+  {
+    "document_id": "open-024",
+    "document_type": "internship_certificate",
+    "fields": {
+      "student_name": "Шестаков Олег Алексеевич",
+      "organization": "Учебная организация «Спектру",
+      "internship_start": "2026-06-01",
+      "internship_end": "2026-07-15",
+      "supervisor_name": "Ильина Елена Андреевна",
+      "grade": "зачтено",
+      "document_number": "ПР-2024",
+      "issue_date": "2026-07-17",
+      "signature_present": true,
+      "seal_present": true
+    }
+  },
+  {
+    "document_id": "open-025",
+    "document_type": "internship_certificate",
+    "fields": {
+      "student_name": "не найдено",
+      "organization": "Учебная организация ФОрбитах",
+      "internship_start": "2026-06-01",
+      "internship_end": "2026-07-15",
+      "supervisor_name": "Кузнецова Мария Сергеевна",
+      "grade": "удовлетворительно",
+      "document_number": "не найдено",
+      "issue_date": "2026-07-16",
+      "signature_present": true,
+      "seal_present": true
+    }
+  },
+  {
+    "document_id": "open-026",
+    "document_type": "internship_certificate",
+    "fields": {
+      "student_name": "Семенов Илья Дмитриевич",
+      "organization": "не найдено",
+      "internship_start": "не найдено",
+      "internship_end": "2026-07-15",
+      "supervisor_name": "Соколова Анна Викторовна",
+      "grade": "удовлетворительно",
+      "document_number": "ПР-2026",
+      "issue_date": "2026-07-23",
+      "signature_present": true,
+      "seal_present": true
+    }
+  },
+  {
+    "document_id": "open-027",
+    "document_type": "internship_certificate",
+    "fields": {
+      "student_name": "Смирнов Кирилл Сергеевич",
+      "organization": "Учебная организация «Парус»",
+      "internship_start": "2026-06-01",
+      "internship_end": "2026-07-15",
+      "supervisor_name": "не найдено",
+      "grade": "не найдено",
+      "document_number": "ПР-2027",
+      "issue_date": "2026-07-25",
+      "signature_present": true,
+      "seal_present": true
+    }
+  },
+  {
+    "document_id": "open-028",
+    "document_type": "internship_certificate",
+    "fields": {
+      "student_name": "Соколов Никита Сергеевич",
+      "organization": "Учебная организация «Спектр»",
+      "internship_start": "не найдено",
+      "internship_end": "2026-07-15",
+      "supervisor_name": "Соколова Анна Викторовна",
+      "grade": "отлично",
+      "document_number": "ПР-2028",
+      "issue_date": "2026-07-23",
+      "signature_present": true,
+      "seal_present": true
+    }
+  },
+  {
+    "document_id": "open-029",
+    "document_type": "internship_certificate",
+    "fields": {
+      "student_name": "Волков Лев Андреевич",
+      "organization": "Учебная организация ФОрбитах",
+      "internship_start": "2026-06-01",
+      "internship_end": "не найдено",
+      "supervisor_name": "Ильина Елена Андреевна",
+      "grade": "хорошо",
+      "document_number": "ПР-2029",
+      "issue_date": "2026-07-23",
+      "signature_present": true,
+      "seal_present": true
+    }
+  },
+  {
+    "document_id": "open-030",
+    "document_type": "internship_certificate",
+    "fields": {
+      "student_name": "Петров Артём Николаевич",
+      "organization": "Учебная организация «Парус»",
+      "internship_start": "2026-06-01",
+      "internship_end": "2026-07-15",
+      "supervisor_name": "Кузнецова Мария Сергеевна",
+      "grade": "отлично",
+      "document_number": "ПР-2О3О",
+      "issue_date": "2026-07-16",
+      "signature_present": true,
+      "seal_present": true
+    }
+  }
+]

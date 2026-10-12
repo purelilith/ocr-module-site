@@ -2,7 +2,7 @@ NOT_FOUND = "не найдено"
 
 DOC_TYPES = {
     "study_certificate": {
-        "keywords": ["справка об обучении", "форма обучения"],
+        "keywords": ["об обучении", "форма обучения", "период обучения", "вуза"],
         "rules": {"text": "rule:3.1", "signature_present": "rule:3.2", "seal_present": "rule:3.3"},
         "fields": {
             "student_name": {"kind": "name", "labels": ["ФИО студента"]},
@@ -20,7 +20,7 @@ DOC_TYPES = {
         },
     },
     "academic_leave_application": {
-        "keywords": ["академический отпуск", "заявление"],
+        "keywords": ["академическ", "отпуск", "заявлени"],
         "rules": {"text": "rule:4.1", "signature_present": "rule:4.2"},
         "fields": {
             "student_name": {"kind": "name", "labels": ["ФИО студента"]},
@@ -34,7 +34,7 @@ DOC_TYPES = {
         },
     },
     "internship_certificate": {
-        "keywords": ["справка о практике", "руководитель практики"],
+        "keywords": ["практик", "руководител", "организаци"],
         "rules": {"text": "rule:5.1", "signature_present": "rule:5.2", "seal_present": "rule:5.3"},
         "fields": {
             "student_name": {"kind": "name", "labels": ["ФИО студента"]},

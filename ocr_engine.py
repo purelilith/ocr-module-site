@@ -6,7 +6,7 @@ reader = easyocr.Reader(["ru", "en"], gpu=False)
 
 
 def _read_lines(image):
-    results = reader.readtext(image)
+    results = reader.readtext(image, min_size=5)
     items = []
     for box, text, confidence in results:
         xs = [point[0] for point in box]
