@@ -6,7 +6,7 @@ DOC_TYPES = {
         "rules": {"text": "rule:3.1", "signature_present": "rule:3.2", "seal_present": "rule:3.3"},
         "fields": {
             "student_name": {"kind": "name", "labels": ["ФИО студента"]},
-            "university": {"kind": "text", "labels": ["Название вуза"]},
+            "university": {"kind": "quoted", "labels": ["Название вуза"]},
             "program": {"kind": "text", "labels": ["Направление подготовки"]},
             "study_form": {"kind": "text", "labels": ["Форма обучения"]},
             "study_start": {"kind": "date", "labels": ["Начало периода обучения"],
@@ -38,12 +38,12 @@ DOC_TYPES = {
         "rules": {"text": "rule:5.1", "signature_present": "rule:5.2", "seal_present": "rule:5.3"},
         "fields": {
             "student_name": {"kind": "name", "labels": ["ФИО студента"]},
-            "organization": {"kind": "text", "labels": ["Название организации"]},
+            "organization": {"kind": "quoted", "labels": ["Название организации"]},
             "internship_start": {"kind": "date", "labels": ["Дата начала практики"]},
             "internship_end": {"kind": "date", "labels": ["Дата окончания практики"]},
             "supervisor_name": {"kind": "name", "labels": ["ФИО руководителя практики"]},
             "grade": {"kind": "text", "labels": ["Оценка"]},
-            "document_number": {"kind": "text", "labels": ["Номер справки"]},
+            "document_number": {"kind": "code", "labels": ["Номер справки"]},
             "issue_date": {"kind": "date", "labels": ["Дата выдачи"]},
             "signature_present": {"kind": "mark"},
             "seal_present": {"kind": "mark"},

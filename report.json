@@ -2,16 +2,10 @@
   "format_valid": true,
   "documents": 30,
   "questions": 120,
-  "field_accuracy_macro": 0.876667,
+  "field_accuracy_macro": 0.930833,
   "validation_exact_match": 0.5,
   "question_exact_match": 0.391667,
   "errors": [
-    {
-      "document_id": "open-001",
-      "field": "university",
-      "expected": "Учебный университет «Меридиан»",
-      "actual": "Учебный университет «Меридианх"
-    },
     {
       "question_id": "open-001-Q1",
       "answer": "structured mismatch"
@@ -23,12 +17,6 @@
     {
       "question_id": "open-001-Q3",
       "answer": "structured mismatch"
-    },
-    {
-      "document_id": "open-002",
-      "field": "university",
-      "expected": "Учебная академия «Горизонт»",
-      "actual": "Учебная академия «Горизонт%"
     },
     {
       "document_id": "open-002",
@@ -47,12 +35,6 @@
     {
       "question_id": "open-002-Q3",
       "answer": "structured mismatch"
-    },
-    {
-      "document_id": "open-003",
-      "field": "university",
-      "expected": "Учебная академия «Горизонт»",
-      "actual": "Учебная академия «Горизонт%"
     },
     {
       "document_id": "open-003",
@@ -78,12 +60,6 @@
     },
     {
       "document_id": "open-004",
-      "field": "university",
-      "expected": "Учебный университет «Меридиан»",
-      "actual": "Учебный университет «Меридианх"
-    },
-    {
-      "document_id": "open-004",
       "field": "seal_present",
       "expected": false,
       "actual": true
@@ -105,12 +81,6 @@
       "answer": "structured mismatch"
     },
     {
-      "document_id": "open-005",
-      "field": "university",
-      "expected": "Учебная академия «Горизонт»",
-      "actual": "Учебная академия «Горизонт%"
-    },
-    {
       "question_id": "open-005-Q1",
       "answer": "structured mismatch"
     },
@@ -127,24 +97,12 @@
       "answer": "structured mismatch"
     },
     {
-      "document_id": "open-007",
-      "field": "university",
-      "expected": "Учебный университет «Меридиан»",
-      "actual": "Учебный университет «Меридианх"
-    },
-    {
       "question_id": "open-007-Q1",
       "answer": "structured mismatch"
     },
     {
       "question_id": "open-007-Q3",
       "answer": "structured mismatch"
-    },
-    {
-      "document_id": "open-008",
-      "field": "university",
-      "expected": "Учебный университет «Меридиан»",
-      "actual": "Учебный университет «Меридианх"
     },
     {
       "document_id": "open-008",
@@ -167,12 +125,6 @@
     {
       "question_id": "open-008-Q3",
       "answer": "structured mismatch"
-    },
-    {
-      "document_id": "open-009",
-      "field": "university",
-      "expected": "Учебная академия «Горизонт»",
-      "actual": "Учебная академия «Горизонт%"
     },
     {
       "question_id": "open-009-Q1",
@@ -284,12 +236,6 @@
     },
     {
       "document_id": "open-015",
-      "field": "leave_reason",
-      "expected": "в связи с уходом за родственником",
-      "actual": "в связи c уходом за родственником"
-    },
-    {
-      "document_id": "open-015",
       "field": "leave_start",
       "expected": "2026-11-01",
       "actual": "не найдено"
@@ -371,12 +317,6 @@
       "answer": "structured mismatch"
     },
     {
-      "document_id": "open-021",
-      "field": "organization",
-      "expected": "Учебная организация «Спектр»",
-      "actual": "Учебная организация «Спектру"
-    },
-    {
       "question_id": "open-021-Q1",
       "answer": "structured mismatch"
     },
@@ -408,18 +348,6 @@
     },
     {
       "document_id": "open-023",
-      "field": "organization",
-      "expected": "Учебная организация «Спектр»",
-      "actual": "Учебная организация «Спектру"
-    },
-    {
-      "document_id": "open-023",
-      "field": "document_number",
-      "expected": "ПР-2023",
-      "actual": "ПР-202З"
-    },
-    {
-      "document_id": "open-023",
       "field": "signature_present",
       "expected": false,
       "actual": true
@@ -442,12 +370,6 @@
     },
     {
       "document_id": "open-024",
-      "field": "organization",
-      "expected": "Учебная организация «Спектр»",
-      "actual": "Учебная организация «Спектру"
-    },
-    {
-      "document_id": "open-024",
       "field": "seal_present",
       "expected": false,
       "actual": true
@@ -467,12 +389,6 @@
     {
       "question_id": "open-024-Q3",
       "answer": "structured mismatch"
-    },
-    {
-      "document_id": "open-025",
-      "field": "organization",
-      "expected": "Учебная организация «Орбита»",
-      "actual": "Учебная организация ФОрбитах"
     },
     {
       "question_id": "open-025-Q1",
@@ -521,24 +437,12 @@
       "answer": "structured mismatch"
     },
     {
-      "document_id": "open-029",
-      "field": "organization",
-      "expected": "Учебная организация «Орбита»",
-      "actual": "Учебная организация ФОрбитах"
-    },
-    {
       "question_id": "open-029-Q1",
       "answer": "structured mismatch"
     },
     {
       "question_id": "open-029-Q3",
       "answer": "structured mismatch"
-    },
-    {
-      "document_id": "open-030",
-      "field": "document_number",
-      "expected": "ПР-2030",
-      "actual": "ПР-2О3О"
     },
     {
       "document_id": "open-030",

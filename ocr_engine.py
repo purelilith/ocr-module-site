@@ -3,10 +3,10 @@ import easyocr
 import fitz  # так называется PyMuPDF при подключении
 
 reader = easyocr.Reader(["ru", "en"], gpu=False)
-
+OCR_OPTIONS = {"min_size": 5}
 
 def _read_lines(image):
-    results = reader.readtext(image, min_size=5)
+    results = reader.readtext(image, **OCR_OPTIONS)
     items = []
     for box, text, confidence in results:
         xs = [point[0] for point in box]

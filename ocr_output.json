@@ -4,7 +4,7 @@
     "document_type": "study_certificate",
     "fields": {
       "student_name": "Александров Артём Игоревич",
-      "university": "Учебный университет «Меридианх",
+      "university": "Учебный университет «Меридиан»",
       "program": "38.03.01 Экономика",
       "study_form": "очная",
       "study_start": "2023-09-01",
@@ -20,7 +20,7 @@
     "document_type": "study_certificate",
     "fields": {
       "student_name": "Мельников Денис Игоревич",
-      "university": "Учебная академия «Горизонт%",
+      "university": "Учебная академия «Горизонт»",
       "program": "09.03.01 Информатика и вычислительная техника",
       "study_form": "очно-заочная",
       "study_start": "не найдено",
@@ -36,7 +36,7 @@
     "document_type": "study_certificate",
     "fields": {
       "student_name": "Жуков Андрей Дмитриевич",
-      "university": "Учебная академия «Горизонт%",
+      "university": "Учебная академия «Горизонт»",
       "program": "38.03.01 Экономика",
       "study_form": "очно-заочная",
       "study_start": "2022-09-01",
@@ -52,7 +52,7 @@
     "document_type": "study_certificate",
     "fields": {
       "student_name": "Климов Борис Дмитриевич",
-      "university": "Учебный университет «Меридианх",
+      "university": "Учебный университет «Меридиан»",
       "program": "09.03.01 Информатика и вычислительная техника",
       "study_form": "очно-заочная",
       "study_start": "2023-09-01",
@@ -68,7 +68,7 @@
     "document_type": "study_certificate",
     "fields": {
       "student_name": "не найдено",
-      "university": "Учебная академия «Горизонт%",
+      "university": "Учебная академия «Горизонт»",
       "program": "09.03.01 Информатика и вычислительная техника",
       "study_form": "очная",
       "study_start": "2022-09-01",
@@ -100,7 +100,7 @@
     "document_type": "study_certificate",
     "fields": {
       "student_name": "Орлов Максим Сергеевич",
-      "university": "Учебный университет «Меридианх",
+      "university": "Учебный университет «Меридиан»",
       "program": "не найдено",
       "study_form": "не найдено",
       "study_start": "2024-09-01",
@@ -116,7 +116,7 @@
     "document_type": "study_certificate",
     "fields": {
       "student_name": "Крылов Артём Викторович",
-      "university": "Учебный университет «Меридианх",
+      "university": "Учебный университет «Меридиан»",
       "program": "42.03.02 Журналистика",
       "study_form": "очная",
       "study_start": "не найдено",
@@ -132,7 +132,7 @@
     "document_type": "study_certificate",
     "fields": {
       "student_name": "Морозов Артём Дмитриевич",
-      "university": "Учебная академия «Горизонт%",
+      "university": "Учебная академия «Горизонт»",
       "program": "38.03.01 Экономика",
       "study_form": "очно-заочная",
       "study_start": "2022-09-01",
@@ -222,7 +222,7 @@
       "student_name": "не найдено",
       "group": "ИВТ-23-4",
       "course": "4",
-      "leave_reason": "в связи c уходом за родственником",
+      "leave_reason": "в связи с уходом за родственником",
       "leave_start": "не найдено",
       "leave_end": "2027-08-31",
       "application_date": "2026-10-06",
@@ -304,7 +304,7 @@
     "document_type": "internship_certificate",
     "fields": {
       "student_name": "Данилов Олег Алексеевич",
-      "organization": "Учебная организация «Спектру",
+      "organization": "Учебная организация «Спектр»",
       "internship_start": "2026-06-01",
       "internship_end": "2026-07-15",
       "supervisor_name": "Ильина Елена Андреевна",
@@ -336,12 +336,12 @@
     "document_type": "internship_certificate",
     "fields": {
       "student_name": "Шестаков Глеб Дмитриевич",
-      "organization": "Учебная организация «Спектру",
+      "organization": "Учебная организация «Спектр»",
       "internship_start": "2026-06-01",
       "internship_end": "2026-07-15",
       "supervisor_name": "Соколова Анна Викторовна",
       "grade": "хорошо",
-      "document_number": "ПР-202З",
+      "document_number": "ПР-2023",
       "issue_date": "2026-07-18",
       "signature_present": true,
       "seal_present": true
@@ -352,7 +352,7 @@
     "document_type": "internship_certificate",
     "fields": {
       "student_name": "Шестаков Олег Алексеевич",
-      "organization": "Учебная организация «Спектру",
+      "organization": "Учебная организация «Спектр»",
       "internship_start": "2026-06-01",
       "internship_end": "2026-07-15",
       "supervisor_name": "Ильина Елена Андреевна",
@@ -368,7 +368,7 @@
     "document_type": "internship_certificate",
     "fields": {
       "student_name": "не найдено",
-      "organization": "Учебная организация ФОрбитах",
+      "organization": "Учебная организация «Орбита»",
       "internship_start": "2026-06-01",
       "internship_end": "2026-07-15",
       "supervisor_name": "Кузнецова Мария Сергеевна",
@@ -432,7 +432,7 @@
     "document_type": "internship_certificate",
     "fields": {
       "student_name": "Волков Лев Андреевич",
-      "organization": "Учебная организация ФОрбитах",
+      "organization": "Учебная организация «Орбита»",
       "internship_start": "2026-06-01",
       "internship_end": "не найдено",
       "supervisor_name": "Ильина Елена Андреевна",
@@ -453,7 +453,7 @@
       "internship_end": "2026-07-15",
       "supervisor_name": "Кузнецова Мария Сергеевна",
       "grade": "отлично",
-      "document_number": "ПР-2О3О",
+      "document_number": "ПР-2030",
       "issue_date": "2026-07-16",
       "signature_present": true,
       "seal_present": true

@@ -61,3 +61,41 @@ def normalize_text(text):
     text = re.sub(r"[ \t]+", " ", text)
     text = re.sub(r" +([,.!?;:])", r"\1", text)
     return text.strip()
+
+LATIN_TO_CYRILLIC = {
+    "a": "а", "c": "с", "e": "е", "o": "о", "p": "р", "x": "х", "y": "у",
+    "A": "А", "B": "В", "C": "С", "E": "Е", "H": "Н", "K": "К", "M": "М",
+    "O": "О", "P": "Р", "T": "Т", "X": "Х", "Y": "У",
+}
+
+LETTER_TO_DIGIT = {"О": "0", "о": "0", "O": "0", "o": "0", "З": "3", "з": "3",
+                   "Ч": "4", "б": "6", "В": "8", "I": "1", "l": "1"}
+
+
+def fix_latin(value):
+    cyrillic = len(re.findall(r"[А-Яа-яЁё]", value))
+    latin = len(re.findall(r"[A-Za-z]", value))
+    if cyrillic <= latin:
+        return value
+    return "".join(LATIN_TO_CYRILLIC.get(ch, ch) for ch in value)
+
+
+def fix_quoted(value):
+    if re.fullmatch(r"\S+ \S+ «[^«»]+»", value):
+        return value
+    parts = value.split(None, 2)
+    if len(parts) < 3:
+        return value
+    first, second, rest = parts
+    name = rest.strip()[1:-1].strip()
+    return f"{first} {second} «{name}»" if name else value
+
+
+def fix_code(value):
+    value = fix_latin(value.strip())
+    match = re.fullmatch(r"([^\W\d_]+)\s*[-–—]\s*(\S+)", value)
+    if not match:
+        return value
+    prefix, number = match.groups()
+    number = "".join(LETTER_TO_DIGIT.get(ch, ch) for ch in number)
+    return f"{prefix}-{number}"

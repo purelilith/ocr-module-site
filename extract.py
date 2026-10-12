@@ -1,5 +1,5 @@
 import re
-from cleanup import clean_name
+from cleanup import clean_name, fix_latin, fix_quoted, fix_code
 from doc_types import DOC_TYPES, NOT_FOUND
 
 MONTHS = {
@@ -65,12 +65,16 @@ def parse_fields(text, doc_type):
         elif not value:
             fields[key] = NOT_FOUND
         elif kind == "name":
-            fields[key] = clean_name(value)
+            fields[key] = clean_name(fix_latin(value))
+        elif kind == "quoted":
+            fields[key] = fix_quoted(fix_latin(value))
+        elif kind == "code":
+            fields[key] = fix_code(value)
         elif kind == "number":
             digits = re.search(r"\d+", value)
             fields[key] = digits.group(0) if digits else NOT_FOUND
         else:
-            fields[key] = fix_quotes(value)
+            fields[key] = fix_quotes(fix_latin(value))
     return fields
 
 
