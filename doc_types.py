@@ -13,7 +13,7 @@ DOC_TYPES = {
                             "period_labels": ["Период обучения"], "period_index": 0},
             "study_end": {"kind": "date", "labels": ["Окончание периода обучения"],
                           "period_labels": ["Период обучения"], "period_index": 1},
-            "document_number": {"kind": "text", "labels": ["Номер справки"]},
+            "document_number": {"kind": "code", "labels": ["Номер справки"]},
             "issue_date": {"kind": "date", "labels": ["Дата выдачи"]},
             "signature_present": {"kind": "mark"},
             "seal_present": {"kind": "mark"},
