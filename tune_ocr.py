@@ -14,11 +14,14 @@ with open(os.path.join(base, "documents.json"), encoding="utf-8") as f:
 with open(os.path.join(base, "reference_results.json"), encoding="utf-8") as f:
     reference = {d["document_id"]: d for d in json.load(f)["documents"]}
 
+if ids == ["all"]:
+    ids = list(documents)
+
 TRIALS = [
-    ("1 дёшево: сжатие листа", True, {"min_size": 5}),
-    ("2 сжатие + мелкие кусочки", True, {"min_size": 1}),
-    ("3 сжатие + увеличение x1.5", True, {"min_size": 1, "mag_ratio": 1.5}),
-    ("4 дорого: без сжатия, увеличение x2", False, {"min_size": 1, "mag_ratio": 2}),
+    ("1 порог 0.4/0.25", True, {"min_size": 5, "text_threshold": 0.4, "low_text": 0.25}),
+    ("2 сосед: порог 0.35/0.2", True, {"min_size": 5, "text_threshold": 0.35, "low_text": 0.2}),
+    ("3 порог 0.5/0.3 + x1.25", True, {"min_size": 5, "text_threshold": 0.5, "low_text": 0.3, "mag_ratio": 1.25}),
+    ("4 точный: x1.75", True, {"min_size": 5, "mag_ratio": 1.75}),
 ]
 
 
@@ -45,6 +48,6 @@ for name, shrink, options in TRIALS:
             if norm(result["fields"][key]) == norm(expected):
                 good += 1
             else:
-                wrong.append(doc_id + ":" + key)
+                wrong.append(f"{doc_id}:{key} ждали {expected!r}, получили {result['fields'][key]!r}")
     seconds = (time.time() - started) / len(ids)
     print(name, "-", good, "из", total, "верно;", round(seconds, 1), "сек на документ; ошибки:", wrong)

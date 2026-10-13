@@ -8,7 +8,11 @@ from scipy import ndimage
 
 reader = easyocr.Reader(["ru", "en"], gpu=False)
 
-OCR_OPTIONS = {"min_size": 5}
+PROFILES = {
+    "fast": {"min_size": 5, "text_threshold": 0.4, "low_text": 0.25},
+    "accurate": {"min_size": 5, "mag_ratio": 1.75},
+}
+OCR_OPTIONS = PROFILES["fast"]
 SHRINK_PAGE = True
 USE_PDF_TEXT_LAYER = True
 
@@ -21,11 +25,17 @@ def prepare_image(image):
     blue = (pixels[..., 2].astype(int) - pixels[..., 0].astype(int) > 20) & (pixels[..., 2] > 90)
     pixels[ndimage.binary_dilation(blue, iterations=2)] = 255
 
-    ink_rows = (pixels.min(axis=2) < 200).any(axis=1)
-    keep = ndimage.binary_dilation(ink_rows, structure=np.ones(40))
-    if not keep.any():
+    dark = pixels.min(axis=2) < 200
+    keep_rows = ndimage.binary_dilation(dark.any(axis=1), structure=np.ones(40))
+    if not keep_rows.any():
         return pixels
-    return pixels[keep]
+    pixels = pixels[keep_rows]
+    dark = dark[keep_rows]
+
+    columns = np.nonzero(dark.any(axis=0))[0]
+    left = max(columns.min() - 40, 0)
+    right = columns.max() + 40
+    return pixels[:, left:right]
 
 
 def _read_lines(image):

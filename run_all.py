@@ -1,12 +1,14 @@
 import json
 import os
 import sys
-
+import ocr_engine
 from pipeline import process_document
 
 base = sys.argv[1]
 
 source = sys.argv[2] if len(sys.argv) > 2 else "image"
+profile = sys.argv[3] if len(sys.argv) > 3 else "fast"
+ocr_engine.OCR_OPTIONS = ocr_engine.PROFILES[profile]
 
 
 def load(name):
