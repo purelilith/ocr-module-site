@@ -6,6 +6,8 @@ from pipeline import process_document
 
 base = sys.argv[1]
 
+source = sys.argv[2] if len(sys.argv) > 2 else "image"
+
 
 def load(name):
     with open(os.path.join(base, name), encoding="utf-8") as f:
@@ -20,7 +22,7 @@ for item in documents:
     document_id = item["document_id"]
     try:
         doc = process_document(
-            os.path.join(base, item["image"]),
+            os.path.join(base, item[source]),
             doc_type=item["document_type"],
             document_id=document_id,
             debug_dir="debug",

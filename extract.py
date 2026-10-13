@@ -35,7 +35,10 @@ def find_after_label(text, labels):
         pattern = r"^[ \t]*" + re.escape(label) + r"[ \t]*[:–—-]?[ \t]*([^\n]*)"
         match = re.search(pattern, text, re.IGNORECASE | re.MULTILINE)
         if match:
-            return match.group(1).strip()
+            value = match.group(1).strip()
+            if re.fullmatch(r"[\s_\-–—.|~=]*", value):
+                return ""
+            return value
     return None
 
 def fix_quotes(value):

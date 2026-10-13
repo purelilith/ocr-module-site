@@ -1,9 +1,32 @@
 import os
+
 import easyocr
-import fitz  # так называется PyMuPDF при подключении
+import numpy as np
+import pymupdf
+from PIL import Image
+from scipy import ndimage
 
 reader = easyocr.Reader(["ru", "en"], gpu=False)
+
 OCR_OPTIONS = {"min_size": 5}
+SHRINK_PAGE = True
+USE_PDF_TEXT_LAYER = True
+
+
+def prepare_image(image):
+    pixels = np.asarray(image.convert("RGB")).copy()
+    if not SHRINK_PAGE:
+        return pixels
+
+    blue = (pixels[..., 2].astype(int) - pixels[..., 0].astype(int) > 20) & (pixels[..., 2] > 90)
+    pixels[ndimage.binary_dilation(blue, iterations=2)] = 255
+
+    ink_rows = (pixels.min(axis=2) < 200).any(axis=1)
+    keep = ndimage.binary_dilation(ink_rows, structure=np.ones(40))
+    if not keep.any():
+        return pixels
+    return pixels[keep]
+
 
 def _read_lines(image):
     results = reader.readtext(image, **OCR_OPTIONS)
@@ -36,10 +59,15 @@ def _read_lines(image):
 
 def recognize(file_path):
     if os.path.splitext(file_path)[1].lower() == ".pdf":
-        pages = []
-        with fitz.open(file_path) as pdf:
+        with pymupdf.open(file_path) as pdf:
+            if USE_PDF_TEXT_LAYER:
+                text = "\n".join(page.get_text() for page in pdf)
+                if len(text.strip()) > 50:
+                    return text
+            pages = []
             for page in pdf:
-                png_bytes = page.get_pixmap(dpi=200).tobytes("png")
-                pages.append(_read_lines(png_bytes))
+                pix = page.get_pixmap(dpi=150)
+                image = Image.frombytes("RGB", (pix.width, pix.height), pix.samples)
+                pages.append(_read_lines(prepare_image(image)))
         return "\n".join(pages)
-    return _read_lines(file_path)
+    return _read_lines(prepare_image(Image.open(file_path)))
