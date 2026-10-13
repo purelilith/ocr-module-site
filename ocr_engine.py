@@ -14,7 +14,7 @@ PROFILES = {
 }
 OCR_OPTIONS = PROFILES["fast"]
 SHRINK_PAGE = True
-USE_PDF_TEXT_LAYER = True
+USE_PDF_TEXT_LAYER = False
 
 
 def prepare_image(image):
@@ -76,7 +76,7 @@ def recognize(file_path):
                     return text
             pages = []
             for page in pdf:
-                pix = page.get_pixmap(dpi=150)
+                pix = page.get_pixmap(dpi=137)
                 image = Image.frombytes("RGB", (pix.width, pix.height), pix.samples)
                 pages.append(_read_lines(prepare_image(image)))
         return "\n".join(pages)

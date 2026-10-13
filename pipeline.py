@@ -34,3 +34,10 @@ def process_document(file_path, doc_type=None, document_id=None, debug_dir=None)
         "validation": validate(doc_type, fields),
         "answers": [],
     }
+
+def for_module3(result):
+    return {
+        "document_id": result["document_id"],
+        "document_type": result["document_type"],
+        "fields": result["fields"],
+    }

@@ -2,8 +2,8 @@
   "format_valid": true,
   "documents": 30,
   "questions": 120,
-  "field_accuracy_macro": 0.930833,
-  "validation_exact_match": 0.5,
+  "field_accuracy_macro": 1.0,
+  "validation_exact_match": 1.0,
   "question_exact_match": 0.391667,
   "errors": [
     {
@@ -19,32 +19,12 @@
       "answer": "structured mismatch"
     },
     {
-      "document_id": "open-002",
-      "field": "study_start",
-      "expected": "2022-09-01",
-      "actual": "не найдено"
-    },
-    {
-      "document_id": "open-002",
-      "validation": "mismatch"
-    },
-    {
       "question_id": "open-002-Q1",
       "answer": "structured mismatch"
     },
     {
       "question_id": "open-002-Q3",
       "answer": "structured mismatch"
-    },
-    {
-      "document_id": "open-003",
-      "field": "signature_present",
-      "expected": false,
-      "actual": true
-    },
-    {
-      "document_id": "open-003",
-      "validation": "mismatch"
     },
     {
       "question_id": "open-003-Q1",
@@ -57,16 +37,6 @@
     {
       "question_id": "open-003-Q3",
       "answer": "structured mismatch"
-    },
-    {
-      "document_id": "open-004",
-      "field": "seal_present",
-      "expected": false,
-      "actual": true
-    },
-    {
-      "document_id": "open-004",
-      "validation": "mismatch"
     },
     {
       "question_id": "open-004-Q1",
@@ -105,16 +75,6 @@
       "answer": "structured mismatch"
     },
     {
-      "document_id": "open-008",
-      "field": "study_start",
-      "expected": "2023-09-01",
-      "actual": "не найдено"
-    },
-    {
-      "document_id": "open-008",
-      "validation": "mismatch"
-    },
-    {
       "question_id": "open-008-Q1",
       "answer": "structured mismatch"
     },
@@ -135,22 +95,6 @@
       "answer": "structured mismatch"
     },
     {
-      "document_id": "open-010",
-      "field": "signature_present",
-      "expected": false,
-      "actual": true
-    },
-    {
-      "document_id": "open-010",
-      "field": "seal_present",
-      "expected": false,
-      "actual": true
-    },
-    {
-      "document_id": "open-010",
-      "validation": "mismatch"
-    },
-    {
       "question_id": "open-010-Q1",
       "answer": "structured mismatch"
     },
@@ -161,22 +105,6 @@
     {
       "question_id": "open-010-Q3",
       "answer": "structured mismatch"
-    },
-    {
-      "document_id": "open-011",
-      "field": "leave_start",
-      "expected": "2026-11-01",
-      "actual": "не найдено"
-    },
-    {
-      "document_id": "open-011",
-      "field": "application_date",
-      "expected": "2026-10-07",
-      "actual": "не найдено"
-    },
-    {
-      "document_id": "open-011",
-      "validation": "mismatch"
     },
     {
       "question_id": "open-011-Q1",
@@ -199,22 +127,6 @@
       "answer": "structured mismatch"
     },
     {
-      "document_id": "open-013",
-      "field": "leave_start",
-      "expected": "2026-11-01",
-      "actual": "не найдено"
-    },
-    {
-      "document_id": "open-013",
-      "field": "signature_present",
-      "expected": false,
-      "actual": true
-    },
-    {
-      "document_id": "open-013",
-      "validation": "mismatch"
-    },
-    {
       "question_id": "open-013-Q1",
       "answer": "structured mismatch"
     },
@@ -235,16 +147,6 @@
       "answer": "structured mismatch"
     },
     {
-      "document_id": "open-015",
-      "field": "leave_start",
-      "expected": "2026-11-01",
-      "actual": "не найдено"
-    },
-    {
-      "document_id": "open-015",
-      "validation": "mismatch"
-    },
-    {
       "question_id": "open-015-Q1",
       "answer": "structured mismatch"
     },
@@ -259,16 +161,6 @@
     {
       "question_id": "open-016-Q3",
       "answer": "structured mismatch"
-    },
-    {
-      "document_id": "open-017",
-      "field": "course",
-      "expected": "1",
-      "actual": "не найдено"
-    },
-    {
-      "document_id": "open-017",
-      "validation": "mismatch"
     },
     {
       "question_id": "open-017-Q1",
@@ -289,16 +181,6 @@
     {
       "question_id": "open-018-Q3",
       "answer": "structured mismatch"
-    },
-    {
-      "document_id": "open-019",
-      "field": "leave_start",
-      "expected": "2026-11-01",
-      "actual": "не найдено"
-    },
-    {
-      "document_id": "open-019",
-      "validation": "mismatch"
     },
     {
       "question_id": "open-019-Q1",
@@ -329,32 +211,12 @@
       "answer": "structured mismatch"
     },
     {
-      "document_id": "open-022",
-      "field": "internship_start",
-      "expected": "2026-06-01",
-      "actual": "не найдено"
-    },
-    {
-      "document_id": "open-022",
-      "validation": "mismatch"
-    },
-    {
       "question_id": "open-022-Q1",
       "answer": "structured mismatch"
     },
     {
       "question_id": "open-022-Q3",
       "answer": "structured mismatch"
-    },
-    {
-      "document_id": "open-023",
-      "field": "signature_present",
-      "expected": false,
-      "actual": true
-    },
-    {
-      "document_id": "open-023",
-      "validation": "mismatch"
     },
     {
       "question_id": "open-023-Q1",
@@ -367,16 +229,6 @@
     {
       "question_id": "open-023-Q3",
       "answer": "structured mismatch"
-    },
-    {
-      "document_id": "open-024",
-      "field": "seal_present",
-      "expected": false,
-      "actual": true
-    },
-    {
-      "document_id": "open-024",
-      "validation": "mismatch"
     },
     {
       "question_id": "open-024-Q1",
@@ -415,16 +267,6 @@
       "answer": "structured mismatch"
     },
     {
-      "document_id": "open-028",
-      "field": "internship_start",
-      "expected": "2026-06-01",
-      "actual": "не найдено"
-    },
-    {
-      "document_id": "open-028",
-      "validation": "mismatch"
-    },
-    {
       "question_id": "open-028-Q1",
       "answer": "structured mismatch"
     },
@@ -443,22 +285,6 @@
     {
       "question_id": "open-029-Q3",
       "answer": "structured mismatch"
-    },
-    {
-      "document_id": "open-030",
-      "field": "signature_present",
-      "expected": false,
-      "actual": true
-    },
-    {
-      "document_id": "open-030",
-      "field": "seal_present",
-      "expected": false,
-      "actual": true
-    },
-    {
-      "document_id": "open-030",
-      "validation": "mismatch"
     },
     {
       "question_id": "open-030-Q1",

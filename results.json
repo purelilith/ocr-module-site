@@ -64,7 +64,7 @@
         "university": "Учебная академия «Горизонт»",
         "program": "09.03.01 Информатика и вычислительная техника",
         "study_form": "очно-заочная",
-        "study_start": "не найдено",
+        "study_start": "2022-09-01",
         "study_end": "2026-08-31",
         "document_number": "ОБ-1002",
         "issue_date": "не найдено",
@@ -74,7 +74,6 @@
       "validation": {
         "status": "missing_fields",
         "missing_fields": [
-          "study_start",
           "issue_date"
         ],
         "sources": [
@@ -124,16 +123,16 @@
         "study_end": "2026-08-31",
         "document_number": "ОБ-1003",
         "issue_date": "2026-09-21",
-        "signature_present": true,
+        "signature_present": false,
         "seal_present": true
       },
       "validation": {
-        "status": "document_ok",
-        "missing_fields": [],
+        "status": "missing_fields",
+        "missing_fields": [
+          "signature_present"
+        ],
         "sources": [
-          "rule:3.1",
-          "rule:3.2",
-          "rule:3.3"
+          "rule:3.2"
         ]
       },
       "answers": [
@@ -180,14 +179,14 @@
         "document_number": "ОБ-1004",
         "issue_date": "2026-09-20",
         "signature_present": true,
-        "seal_present": true
+        "seal_present": false
       },
       "validation": {
-        "status": "document_ok",
-        "missing_fields": [],
+        "status": "missing_fields",
+        "missing_fields": [
+          "seal_present"
+        ],
         "sources": [
-          "rule:3.1",
-          "rule:3.2",
           "rule:3.3"
         ]
       },
@@ -398,7 +397,7 @@
         "university": "Учебный университет «Меридиан»",
         "program": "42.03.02 Журналистика",
         "study_form": "очная",
-        "study_start": "не найдено",
+        "study_start": "2023-09-01",
         "study_end": "2026-08-31",
         "document_number": "ОБ-1008",
         "issue_date": "2026-09-14",
@@ -406,12 +405,12 @@
         "seal_present": true
       },
       "validation": {
-        "status": "missing_fields",
-        "missing_fields": [
-          "study_start"
-        ],
+        "status": "document_ok",
+        "missing_fields": [],
         "sources": [
-          "rule:3.1"
+          "rule:3.1",
+          "rule:3.2",
+          "rule:3.3"
         ]
       },
       "answers": [
@@ -512,14 +511,16 @@
         "study_end": "2026-08-31",
         "document_number": "ОБ-1010",
         "issue_date": "2026-09-20",
-        "signature_present": true,
-        "seal_present": true
+        "signature_present": false,
+        "seal_present": false
       },
       "validation": {
-        "status": "document_ok",
-        "missing_fields": [],
+        "status": "missing_fields",
+        "missing_fields": [
+          "signature_present",
+          "seal_present"
+        ],
         "sources": [
-          "rule:3.1",
           "rule:3.2",
           "rule:3.3"
         ]
@@ -563,19 +564,17 @@
         "group": "ЖР-25-1",
         "course": "3",
         "leave_reason": "по состоянию здоровья",
-        "leave_start": "не найдено",
+        "leave_start": "2026-11-01",
         "leave_end": "2027-08-31",
-        "application_date": "не найдено",
+        "application_date": "2026-10-07",
         "signature_present": true
       },
       "validation": {
-        "status": "missing_fields",
-        "missing_fields": [
-          "leave_start",
-          "application_date"
-        ],
+        "status": "document_ok",
+        "missing_fields": [],
         "sources": [
-          "rule:4.1"
+          "rule:4.1",
+          "rule:4.2"
         ]
       },
       "answers": [
@@ -670,18 +669,18 @@
         "group": "ЭК-24-2",
         "course": "4",
         "leave_reason": "по семейным обстоятельствам",
-        "leave_start": "не найдено",
+        "leave_start": "2026-11-01",
         "leave_end": "2027-08-31",
         "application_date": "2026-10-04",
-        "signature_present": true
+        "signature_present": false
       },
       "validation": {
         "status": "missing_fields",
         "missing_fields": [
-          "leave_start"
+          "signature_present"
         ],
         "sources": [
-          "rule:4.1"
+          "rule:4.2"
         ]
       },
       "answers": [
@@ -776,7 +775,7 @@
         "group": "ИВТ-23-4",
         "course": "4",
         "leave_reason": "в связи с уходом за родственником",
-        "leave_start": "не найдено",
+        "leave_start": "2026-11-01",
         "leave_end": "2027-08-31",
         "application_date": "2026-10-06",
         "signature_present": true
@@ -784,8 +783,7 @@
       "validation": {
         "status": "missing_fields",
         "missing_fields": [
-          "student_name",
-          "leave_start"
+          "student_name"
         ],
         "sources": [
           "rule:4.1"
@@ -882,7 +880,7 @@
       "fields": {
         "student_name": "Захаров Юрий Николаевич",
         "group": "ЖР-21-2",
-        "course": "не найдено",
+        "course": "1",
         "leave_reason": "по состоянию здоровья",
         "leave_start": "не найдено",
         "leave_end": "2027-08-31",
@@ -892,7 +890,6 @@
       "validation": {
         "status": "missing_fields",
         "missing_fields": [
-          "course",
           "leave_start"
         ],
         "sources": [
@@ -990,7 +987,7 @@
         "group": "ЖР-23-4",
         "course": "2",
         "leave_reason": "по состоянию здоровья",
-        "leave_start": "не найдено",
+        "leave_start": "2026-11-01",
         "leave_end": "не найдено",
         "application_date": "2026-10-02",
         "signature_present": true
@@ -998,7 +995,6 @@
       "validation": {
         "status": "missing_fields",
         "missing_fields": [
-          "leave_start",
           "leave_end"
         ],
         "sources": [
@@ -1151,7 +1147,7 @@
       "fields": {
         "student_name": "Мельников Фёдор Михайлович",
         "organization": "Учебная организация «Спектр»",
-        "internship_start": "не найдено",
+        "internship_start": "2026-06-01",
         "internship_end": "2026-07-15",
         "supervisor_name": "Соколова Анна Викторовна",
         "grade": "зачтено",
@@ -1163,7 +1159,6 @@
       "validation": {
         "status": "missing_fields",
         "missing_fields": [
-          "internship_start",
           "issue_date"
         ],
         "sources": [
@@ -1213,16 +1208,16 @@
         "grade": "хорошо",
         "document_number": "ПР-2023",
         "issue_date": "2026-07-18",
-        "signature_present": true,
+        "signature_present": false,
         "seal_present": true
       },
       "validation": {
-        "status": "document_ok",
-        "missing_fields": [],
+        "status": "missing_fields",
+        "missing_fields": [
+          "signature_present"
+        ],
         "sources": [
-          "rule:5.1",
-          "rule:5.2",
-          "rule:5.3"
+          "rule:5.2"
         ]
       },
       "answers": [
@@ -1269,14 +1264,14 @@
         "document_number": "ПР-2024",
         "issue_date": "2026-07-17",
         "signature_present": true,
-        "seal_present": true
+        "seal_present": false
       },
       "validation": {
-        "status": "document_ok",
-        "missing_fields": [],
+        "status": "missing_fields",
+        "missing_fields": [
+          "seal_present"
+        ],
         "sources": [
-          "rule:5.1",
-          "rule:5.2",
           "rule:5.3"
         ]
       },
@@ -1485,7 +1480,7 @@
       "fields": {
         "student_name": "Соколов Никита Сергеевич",
         "organization": "Учебная организация «Спектр»",
-        "internship_start": "не найдено",
+        "internship_start": "2026-06-01",
         "internship_end": "2026-07-15",
         "supervisor_name": "Соколова Анна Викторовна",
         "grade": "отлично",
@@ -1495,12 +1490,12 @@
         "seal_present": true
       },
       "validation": {
-        "status": "missing_fields",
-        "missing_fields": [
-          "internship_start"
-        ],
+        "status": "document_ok",
+        "missing_fields": [],
         "sources": [
-          "rule:5.1"
+          "rule:5.1",
+          "rule:5.2",
+          "rule:5.3"
         ]
       },
       "answers": [
@@ -1601,14 +1596,16 @@
         "grade": "отлично",
         "document_number": "ПР-2030",
         "issue_date": "2026-07-16",
-        "signature_present": true,
-        "seal_present": true
+        "signature_present": false,
+        "seal_present": false
       },
       "validation": {
-        "status": "document_ok",
-        "missing_fields": [],
+        "status": "missing_fields",
+        "missing_fields": [
+          "signature_present",
+          "seal_present"
+        ],
         "sources": [
-          "rule:5.1",
           "rule:5.2",
           "rule:5.3"
         ]

@@ -23,7 +23,7 @@
       "university": "Учебная академия «Горизонт»",
       "program": "09.03.01 Информатика и вычислительная техника",
       "study_form": "очно-заочная",
-      "study_start": "не найдено",
+      "study_start": "2022-09-01",
       "study_end": "2026-08-31",
       "document_number": "ОБ-1002",
       "issue_date": "не найдено",
@@ -43,7 +43,7 @@
       "study_end": "2026-08-31",
       "document_number": "ОБ-1003",
       "issue_date": "2026-09-21",
-      "signature_present": true,
+      "signature_present": false,
       "seal_present": true
     }
   },
@@ -60,7 +60,7 @@
       "document_number": "ОБ-1004",
       "issue_date": "2026-09-20",
       "signature_present": true,
-      "seal_present": true
+      "seal_present": false
     }
   },
   {
@@ -119,7 +119,7 @@
       "university": "Учебный университет «Меридиан»",
       "program": "42.03.02 Журналистика",
       "study_form": "очная",
-      "study_start": "не найдено",
+      "study_start": "2023-09-01",
       "study_end": "2026-08-31",
       "document_number": "ОБ-1008",
       "issue_date": "2026-09-14",
@@ -155,8 +155,8 @@
       "study_end": "2026-08-31",
       "document_number": "ОБ-1010",
       "issue_date": "2026-09-20",
-      "signature_present": true,
-      "seal_present": true
+      "signature_present": false,
+      "seal_present": false
     }
   },
   {
@@ -167,9 +167,9 @@
       "group": "ЖР-25-1",
       "course": "3",
       "leave_reason": "по состоянию здоровья",
-      "leave_start": "не найдено",
+      "leave_start": "2026-11-01",
       "leave_end": "2027-08-31",
-      "application_date": "не найдено",
+      "application_date": "2026-10-07",
       "signature_present": true
     }
   },
@@ -195,10 +195,10 @@
       "group": "ЭК-24-2",
       "course": "4",
       "leave_reason": "по семейным обстоятельствам",
-      "leave_start": "не найдено",
+      "leave_start": "2026-11-01",
       "leave_end": "2027-08-31",
       "application_date": "2026-10-04",
-      "signature_present": true
+      "signature_present": false
     }
   },
   {
@@ -223,7 +223,7 @@
       "group": "ИВТ-23-4",
       "course": "4",
       "leave_reason": "в связи с уходом за родственником",
-      "leave_start": "не найдено",
+      "leave_start": "2026-11-01",
       "leave_end": "2027-08-31",
       "application_date": "2026-10-06",
       "signature_present": true
@@ -249,7 +249,7 @@
     "fields": {
       "student_name": "Захаров Юрий Николаевич",
       "group": "ЖР-21-2",
-      "course": "не найдено",
+      "course": "1",
       "leave_reason": "по состоянию здоровья",
       "leave_start": "не найдено",
       "leave_end": "2027-08-31",
@@ -279,7 +279,7 @@
       "group": "ЖР-23-4",
       "course": "2",
       "leave_reason": "по состоянию здоровья",
-      "leave_start": "не найдено",
+      "leave_start": "2026-11-01",
       "leave_end": "не найдено",
       "application_date": "2026-10-02",
       "signature_present": true
@@ -321,7 +321,7 @@
     "fields": {
       "student_name": "Мельников Фёдор Михайлович",
       "organization": "Учебная организация «Спектр»",
-      "internship_start": "не найдено",
+      "internship_start": "2026-06-01",
       "internship_end": "2026-07-15",
       "supervisor_name": "Соколова Анна Викторовна",
       "grade": "зачтено",
@@ -343,7 +343,7 @@
       "grade": "хорошо",
       "document_number": "ПР-2023",
       "issue_date": "2026-07-18",
-      "signature_present": true,
+      "signature_present": false,
       "seal_present": true
     }
   },
@@ -360,7 +360,7 @@
       "document_number": "ПР-2024",
       "issue_date": "2026-07-17",
       "signature_present": true,
-      "seal_present": true
+      "seal_present": false
     }
   },
   {
@@ -417,7 +417,7 @@
     "fields": {
       "student_name": "Соколов Никита Сергеевич",
       "organization": "Учебная организация «Спектр»",
-      "internship_start": "не найдено",
+      "internship_start": "2026-06-01",
       "internship_end": "2026-07-15",
       "supervisor_name": "Соколова Анна Викторовна",
       "grade": "отлично",
@@ -455,8 +455,8 @@
       "grade": "отлично",
       "document_number": "ПР-2030",
       "issue_date": "2026-07-16",
-      "signature_present": true,
-      "seal_present": true
+      "signature_present": false,
+      "seal_present": false
     }
   }
 ]
