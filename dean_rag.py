@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+#!/usr/bin/env python3
 """Модуль 3 «Онлайн-деканат»: проверка комплектности и ответы на вопросы.
 
 Вход : карточка документа от OCR-модуля (document_type + fields) и вопрос на русском.
@@ -159,7 +160,7 @@ class DeanRAG:
         rule_ids = {spec[k]["rule"] for k in (missing or spec)}
         return {"status": "missing_fields" if missing else "document_ok",
                 "missing_fields": missing,
-                "sources": sorted(rule_ids, key=lambda r: tuple(map(int, r.split("."))))}  # без префикса, см. ниже
+                "sources": sorted(rule_ids, key=lambda r: tuple(map(int, r.split("."))))}
 
     def _rule_refs(self, ids):
         return [f"rule:{i}" for i in ids]
@@ -182,7 +183,7 @@ class DeanRAG:
         for k, f in own.items():
             for p in f["patterns"]:
                 m = re.search(p, q)
-                weight = len(m.group(0)) + (100 if f["kind"] == "mark" else 0) if m else 0  # «подпись/печать руководителя» -> отметка, не ФИО
+                weight = len(m.group(0)) + (100 if f["kind"] == "mark" else 0) if m else 0
                 if m and (best is None or weight > best[0]):
                     best = (weight, k)
         if best:
@@ -227,8 +228,7 @@ class DeanRAG:
 
         # 1. кто принимает решение (п. 1.3)
         if self.RE_DECISION.search(q) and not quoted_field:
-            text = ("Окончательное решение о принятии документа принимает сотрудник деканата, пункт 1.3 Положения. "
-                    "Сервис выполняет только предварительную проверку и не сообщает, что документ принят.")
+            text = "Окончательное решение принимает сотрудник деканата, пункт 1.3 Положения."
             return rec(True, DECISION_VALUE, text, ["rule:1.3"]), {"route": "decision", "rules": ["1.3"]}
 
         # 2. комплектность
@@ -241,7 +241,7 @@ class DeanRAG:
         if key:
             return self._field_answer(dtype, key, fields, spec), {"route": "field", "field": key}
         if foreign:
-            hit = None if re.search(r"значение поля|укажи|назови", q) else self.index.search(question, min_score=0.5)  # напр. п. 4.3: печать для заявления не требуется
+            hit = None if re.search(r"значение поля|укажи|назови", q) else self.index.search(question, min_score=0.5)
             if hit and hit[0] not in self.not_established:
                 cid = hit[0]
                 return (rec(True, self.index.text(cid), f"Согласно пункту {cid} Положения: {self.index.text(cid)}", [f"rule:{cid}"]),
@@ -273,8 +273,7 @@ class DeanRAG:
                     "Окончательное решение примет сотрудник деканата.")
         else:
             names = ", ".join(norm_text(spec[k]["label"]) for k in val["missing_fields"])
-            text = (f"Не хватает следующих сведений: {names}. Основание: пункты {pts} Положения. "
-                    "Окончательное решение примет сотрудник деканата.")
+            text = f"Не хватает следующих сведений: {names}. Основание: пункты {pts} Положения."
         return {"question_id": None, "answerable": True, "value": val["status"], "answer": text, "sources": refs}
 
     def _field_answer(self, dtype, key, fields, spec):
