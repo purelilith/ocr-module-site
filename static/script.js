@@ -43,11 +43,25 @@ recognizeBtn.addEventListener("click", async () => {
     const data = await response.json();
 
     if (response.ok) {
-      // Выводим итоговый JSON, включающий результаты OCR и ответы Модуля 3
-      resultTextarea.value = JSON.stringify(data, null, 2);
+      // Проверяем, есть ли ответы от Модуля 3, и выводим человекочитаемый текст
+      if (data.answers && data.answers.length > 0) {
+        // Берем текст ответа из первого сгенерированного вопроса
+        let outputText = data.answers[0].answer;
+        
+        // Если есть источники (например, пункты правил или поля), добавим их
+        if (data.answers[0].sources && data.answers[0].sources.length > 0) {
+          outputText += "\n\nИсточники: " + data.answers[0].sources.join(", ");
+        }
+        
+        resultTextarea.value = outputText;
+      } else {
+        // Если модуль 3 не вернул ответы, выводим поля документа
+        resultTextarea.value = "Документ успешно распознан!\nСтатус: " + (data.validation ? data.validation.status : "ок");
+      }
     } else {
-      resultTextarea.value = "Ошибка: " + (data.error || "Не удалось обработать документ");
+      resultTextarea.value = "Ошибка: " + (data.error || "Не удалось распознать документ");
     }
+
   } catch (error) {
     resultTextarea.value = "Ошибка соединения с сервером";
   } finally {
