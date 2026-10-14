@@ -43,24 +43,16 @@ recognizeBtn.addEventListener("click", async () => {
     const data = await response.json();
 
     if (response.ok) {
-      // Проверяем, есть ли ответы от Модуля 3, и выводим человекочитаемый текст
+      // Выводим ТОЛЬКО чистый текст ответа без технических меток
       if (data.answers && data.answers.length > 0) {
-        // Берем текст ответа из первого сгенерированного вопроса
-        let outputText = data.answers[0].answer;
-        
-        // Если есть источники (например, пункты правил или поля), добавим их
-        if (data.answers[0].sources && data.answers[0].sources.length > 0) {
-          outputText += "\n\nИсточники: " + data.answers[0].sources.join(", ");
-        }
-        
-        resultTextarea.value = outputText;
+        resultTextarea.value = data.answers[0].answer;
       } else {
-        // Если модуль 3 не вернул ответы, выводим поля документа
         resultTextarea.value = "Документ успешно распознан!\nСтатус: " + (data.validation ? data.validation.status : "ок");
       }
     } else {
       resultTextarea.value = "Ошибка: " + (data.error || "Не удалось распознать документ");
     }
+
 
   } catch (error) {
     resultTextarea.value = "Ошибка соединения с сервером";
