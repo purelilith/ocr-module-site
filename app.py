@@ -1,9 +1,9 @@
 import os
 import uuid
-
 from flask import Flask, render_template, request, jsonify
 
 from pipeline import process_document
+from dean_rag import DeanRAG  # Импортируем Модуль 3
 
 app = Flask(__name__)
 app.config["MAX_CONTENT_LENGTH"] = 10 * 1024 * 1024
@@ -12,6 +12,8 @@ UPLOAD_DIR = "uploads"
 ALLOWED = {".jpg", ".jpeg", ".png", ".webp", ".bmp", ".pdf"}
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
+# Инициализируем RAG-модуль один раз при старте сервера[span_6](start_span)[span_6](end_span)[span_7](start_span)[span_7](end_span)
+rag = DeanRAG()
 
 @app.route("/")
 def home():
@@ -32,15 +34,33 @@ def upload():
     file.save(path)
 
     try:
-        result = process_document(path, document_id=file.filename)
+        # Шаг 1 (Модуль 2): Распознавание и парсинг полей в JSON-карточку
+        doc_result = process_document(path, document_id=file.filename)
+        
+        # Шаг 2 (Модуль 3): Валидация и проверка комплектности по Положению
+        # Получаем стандартную проверку комплектности (эквивалент вопросов о комплектности)
+        validation_info = rag.validation_record(doc_result)
+        doc_result["validation"] = validation_info
+
+        # Если пользователь передал текстовый вопрос (например, через дополнительное поле на сайте),
+        # мы можем обработать его через Модуль 3:
+        question = request.form.get("question", "").strip()
+        if question:
+            answer_record, trace = rag.answer_with_trace(doc_result, question, "web-Q1")
+            doc_result["answers"] = [answer_record]
+        else:
+            # Или генерируем стандартные ответы для всех привязанных вопросов (если требуется)
+            doc_result["answers"] = []
+
     except ValueError as error:
         return jsonify({"error": str(error)}), 422
-    except Exception:
-        return jsonify({"error": "Не получилось распознать документ"}), 500
+    except Exception as e:
+        return jsonify({"error": "Не получилось распознать документ: " + str(e)}), 500
     finally:
-        os.remove(path)
+        if os.path.exists(path):
+            os.remove(path)
 
-    return jsonify(result)
+    return jsonify(doc_result)
 
 
 if __name__ == "__main__":

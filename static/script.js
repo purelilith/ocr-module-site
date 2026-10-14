@@ -3,6 +3,7 @@ const fileName = document.getElementById("fileName");
 const preview = document.getElementById("preview");
 const recognizeBtn = document.getElementById("recognizeBtn");
 const resultTextarea = document.getElementById("result");
+const questionInput = document.getElementById("questionInput"); // Новое поле ввода вопроса
 
 let selectedFile = null;
 
@@ -22,11 +23,16 @@ recognizeBtn.addEventListener("click", async () => {
   if (!selectedFile) return;
 
   recognizeBtn.disabled = true;
-  recognizeBtn.textContent = "Распознавание...";
+  recognizeBtn.textContent = "Обработка модулями OCR и RAG...";
   resultTextarea.value = "";
 
   const formData = new FormData();
   formData.append("photo", selectedFile);
+  
+  // Передаем вопрос, если он введен пользователем
+  if (questionInput && questionInput.value.trim()) {
+    formData.append("question", questionInput.value.trim());
+  }
 
   try {
     const response = await fetch("/upload", {
@@ -37,15 +43,15 @@ recognizeBtn.addEventListener("click", async () => {
     const data = await response.json();
 
     if (response.ok) {
-      // Выводим полученный JSON-ответ в красивом формате
+      // Выводим итоговый JSON, включающий результаты OCR и ответы Модуля 3
       resultTextarea.value = JSON.stringify(data, null, 2);
     } else {
-      resultTextarea.value = "Ошибка: " + (data.error || "Не удалось распознать документ");
+      resultTextarea.value = "Ошибка: " + (data.error || "Не удалось обработать документ");
     }
   } catch (error) {
     resultTextarea.value = "Ошибка соединения с сервером";
   } finally {
     recognizeBtn.disabled = false;
-    recognizeBtn.textContent = "Распознать текст";
+    recognizeBtn.textContent = "Распознать и проверить";
   }
 });
